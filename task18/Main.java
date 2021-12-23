@@ -22,31 +22,43 @@ public class Main {
         switch (sw) {
             case "ClientOne": {
                 System.out.println("Введите ИНН");
-                int inn = scanner.nextInt();
-                if (inn == Customer.ClientOne.getInn())
-                    System.out.println("ИНН введен верно");
-                else
-                    System.out.println("ИНН введен неверно");
-                break;
+                try {
+                    int inn = scanner.nextInt();
+                    if (inn == Customer.ClientOne.getInn()) {
+                        System.out.println("ИНН введен верно");
+                    } else {
+                        throw new Exception();
+                    }
+                } catch (Exception e) {
+                    System.out.println("ИНН указан неверно!");
+                }
             }
-            case "ClientTwo": {
-                System.out.println("Введите ИНН");
+        case "ClientTwo": {
+            System.out.println("Введите ИНН");
+            try {
                 int inn = scanner.nextInt();
-                if (inn == Customer.ClientTwo.getInn())
+                if (inn == Customer.ClientTwo.getInn()) {
                     System.out.println("ИНН введен верно");
-                else
-                    System.out.println("ИНН введен неверно");
-                break;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.out.println("ИНН указан неверно!");
             }
-            case "ClientThree": {
-                System.out.println("Введите ИНН");
+        }
+        case "ClientThree": {
+            System.out.println("Введите ИНН");
+            try {
                 int inn = scanner.nextInt();
-                if (inn == Customer.ClientThree.getInn())
+                if (inn == Customer.ClientThree.getInn()) {
                     System.out.println("ИНН введен верно");
-                else
-                    System.out.println("ИНН введен неверно");
-                break;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.out.println("ИНН указан неверно!");
             }
+        }
         }
 
     }
