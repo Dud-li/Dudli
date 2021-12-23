@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Shape {
+    protected Color color;
+    protected int x=0;
+    protected int y=0;
+    setColor(Color a)
+    setXY(int a,int b)
+    public Color getColor()
+    public int getX()
+    public int getY()
+}
+class Rectangle extends Shape{
+    protected double length;
+    protected double width;
+    public Rectangle()
+    public Rectangle(double a,double b)
+    public Rectangle(String a,boolean b,double c,double d)
+    public void setLength(double length)
+    public void setWidth(double width)
+    public double getLength()
+    public double getWidth()
+    public double getArea()
+    public double getPerimeter()
+    public String toString()
+}
+class Circle extends Shape{
+    protected double radius;
+    public Circle()
+    public Circle(String a,boolean b,double c)
+    public void setRadius(double radius)
+    public double getRadius()
+    public double getArea()
+    public double getPerimeter()
+    public String toString()
+}
+class Square extends Rectangle{
+    public Square()
+    public Square (double side)
+    public Square(String a,boolean b,double c)
+    public void setSide(double side)
+    public double getSide()
+    public void setLength(double side)
+    public void setWidth(double side)
+    public String toString()
+}
+
+@enduml
